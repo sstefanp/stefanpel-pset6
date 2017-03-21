@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC302EFDBAAB49D5828E80F4 /* Pods_Wine_Cellar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F31D7CB317192C6AD64CB15 /* Pods_Wine_Cellar.framework */; };
 		F86FCF341E814D9D00D99190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86FCF331E814D9D00D99190 /* AppDelegate.swift */; };
-		F86FCF361E814D9D00D99190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86FCF351E814D9D00D99190 /* ViewController.swift */; };
 		F86FCF391E814D9D00D99190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86FCF371E814D9D00D99190 /* Main.storyboard */; };
 		F86FCF3B1E814D9D00D99190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86FCF3A1E814D9D00D99190 /* Assets.xcassets */; };
 		F86FCF3E1E814D9D00D99190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86FCF3C1E814D9D00D99190 /* LaunchScreen.storyboard */; };
+		F86FCF471E814EE200D99190 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F86FCF461E814EE200D99190 /* GoogleService-Info.plist */; };
+		F86FCF491E8153B500D99190 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86FCF481E8153B500D99190 /* LoginViewController.swift */; };
+		F87ABD721E81B8D300A66D54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD711E81B8D300A66D54 /* HomeViewController.swift */; };
+		F87ABD741E81BD2A00A66D54 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */; };
+		F87ABD761E81BFC300A66D54 /* CellarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */; };
+		F87ABD781E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F31D7CB317192C6AD64CB15 /* Pods_Wine_Cellar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wine_Cellar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A0B4A162AC3BF0ABFCCFA0 /* Pods-Wine Cellar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Cellar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Cellar/Pods-Wine Cellar.debug.xcconfig"; sourceTree = "<group>"; };
+		A0808DE6444325755882EBEF /* Pods-Wine Cellar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Cellar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Cellar/Pods-Wine Cellar.release.xcconfig"; sourceTree = "<group>"; };
 		F86FCF301E814D9D00D99190 /* Wine Cellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Cellar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86FCF331E814D9D00D99190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F86FCF351E814D9D00D99190 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F86FCF381E814D9D00D99190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F86FCF3A1E814D9D00D99190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86FCF3D1E814D9D00D99190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86FCF3F1E814D9D00D99190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86FCF461E814EE200D99190 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F86FCF481E8153B500D99190 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F87ABD711E81B8D300A66D54 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarTableViewController.swift; sourceTree = "<group>"; };
+		F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC302EFDBAAB49D5828E80F4 /* Pods_Wine_Cellar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		904124B148DB26441593A16D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F31D7CB317192C6AD64CB15 /* Pods_Wine_Cellar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B124E4B0862EAE29C3BD1D3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81A0B4A162AC3BF0ABFCCFA0 /* Pods-Wine Cellar.debug.xcconfig */,
+				A0808DE6444325755882EBEF /* Pods-Wine Cellar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F86FCF271E814D9D00D99190 = {
 			isa = PBXGroup;
 			children = (
 				F86FCF321E814D9D00D99190 /* Wine Cellar */,
 				F86FCF311E814D9D00D99190 /* Products */,
+				B124E4B0862EAE29C3BD1D3E /* Pods */,
+				904124B148DB26441593A16D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +89,16 @@
 			isa = PBXGroup;
 			children = (
 				F86FCF331E814D9D00D99190 /* AppDelegate.swift */,
-				F86FCF351E814D9D00D99190 /* ViewController.swift */,
 				F86FCF371E814D9D00D99190 /* Main.storyboard */,
 				F86FCF3A1E814D9D00D99190 /* Assets.xcassets */,
 				F86FCF3C1E814D9D00D99190 /* LaunchScreen.storyboard */,
+				F86FCF461E814EE200D99190 /* GoogleService-Info.plist */,
 				F86FCF3F1E814D9D00D99190 /* Info.plist */,
+				F86FCF481E8153B500D99190 /* LoginViewController.swift */,
+				F87ABD711E81B8D300A66D54 /* HomeViewController.swift */,
+				F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */,
+				F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */,
+				F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */,
 			);
 			path = "Wine Cellar";
 			sourceTree = "<group>";
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86FCF421E814D9D00D99190 /* Build configuration list for PBXNativeTarget "Wine Cellar" */;
 			buildPhases = (
+				A3D079E6823766D917F4C6D9 /* [CP] Check Pods Manifest.lock */,
 				F86FCF2C1E814D9D00D99190 /* Sources */,
 				F86FCF2D1E814D9D00D99190 /* Frameworks */,
 				F86FCF2E1E814D9D00D99190 /* Resources */,
+				F1B1CB25CEAEF1A0F158ECE3 /* [CP] Embed Pods Frameworks */,
+				FF3C10A558FB322C83CB6823 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86FCF3E1E814D9D00D99190 /* LaunchScreen.storyboard in Resources */,
+				F86FCF471E814EE200D99190 /* GoogleService-Info.plist in Resources */,
 				F86FCF3B1E814D9D00D99190 /* Assets.xcassets in Resources */,
 				F86FCF391E814D9D00D99190 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +175,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A3D079E6823766D917F4C6D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B1CB25CEAEF1A0F158ECE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wine Cellar/Pods-Wine Cellar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF3C10A558FB322C83CB6823 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wine Cellar/Pods-Wine Cellar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F86FCF2C1E814D9D00D99190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86FCF361E814D9D00D99190 /* ViewController.swift in Sources */,
+				F86FCF491E8153B500D99190 /* LoginViewController.swift in Sources */,
 				F86FCF341E814D9D00D99190 /* AppDelegate.swift in Sources */,
+				F87ABD761E81BFC300A66D54 /* CellarTableViewController.swift in Sources */,
+				F87ABD721E81B8D300A66D54 /* HomeViewController.swift in Sources */,
+				F87ABD781E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift in Sources */,
+				F87ABD741E81BD2A00A66D54 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +354,7 @@
 		};
 		F86FCF431E814D9D00D99190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A0B4A162AC3BF0ABFCCFA0 /* Pods-Wine Cellar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CH6468FQ7;
@@ -272,6 +368,7 @@
 		};
 		F86FCF441E814D9D00D99190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0808DE6444325755882EBEF /* Pods-Wine Cellar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CH6468FQ7;
@@ -302,6 +399,7 @@
 				F86FCF441E814D9D00D99190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
