@@ -131,7 +131,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Go To SingleCocktailViewController
+        let cocktailClicked = searchResults[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SCVC") as! SingleCocktailViewController
+        
+        viewController.currentCocktail = cocktailClicked
+        
+        // Present SingleCocktailViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     

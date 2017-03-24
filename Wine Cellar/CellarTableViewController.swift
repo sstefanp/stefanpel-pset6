@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class CellarTableViewController: UITableViewController {
+    
+    var myCocktails : [[String: Any]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadAllMyCocktail()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,28 +30,53 @@ class CellarTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadAllMyCocktail(){
+        
+        guard let currentUser = FIRAuth.auth()?.currentUser else { return }
+        let ref  = FIRDatabase.database().reference()
+        let items = ref.child("users/\(currentUser.uid)/cocktails")
+        
+        var observer: FIRDatabaseHandle? = nil
+        observer = items.observe(.value, with: { (snapshot) in
+            if let observer = observer {
+                items.removeObserver(withHandle: observer)
+            }
+            
+            self.myCocktails.removeAll()
+            
+            for item in snapshot.children {
+                let item = item as! FIRDataSnapshot
+                self.myCocktails.append(item.value as! [String : Any])
+            }
+            
+            self.tableView.reloadData()
+        })
+        
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return myCocktails.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = myCocktails[indexPath.row]["strDrink"] as? String
 
+        //cell.textLabel?.text = ""
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
