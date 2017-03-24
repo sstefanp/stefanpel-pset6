@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: textFieldLoginEmail.text!, password: textFieldLoginPassword.text!) { (user, error) in
             if error == nil {
                 // go to next view
-                self.performSegue(withIdentifier: "login", sender: nil)
+                self.dismiss(animated: true, completion: nil)
                 
             }
         }
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
             FIRAuth.auth()!.createUser(withEmail: emailField.text!, password: passwordField.text!) { user, error in
                 if error == nil {
                     FIRAuth.auth()!.signIn(withEmail: emailField.text!, password: passwordField.text!)
-                    self.performSegue(withIdentifier: "login", sender: nil)
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))

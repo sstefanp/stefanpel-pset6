@@ -17,7 +17,8 @@
 		F87ABD721E81B8D300A66D54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD711E81B8D300A66D54 /* HomeViewController.swift */; };
 		F87ABD741E81BD2A00A66D54 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */; };
 		F87ABD761E81BFC300A66D54 /* CellarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */; };
-		F87ABD781E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */; };
+		F87ABD781E81C9DF00A66D54 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD771E81C9DF00A66D54 /* SearchTableViewCell.swift */; };
+		F87ABD7C1E845BC000A66D54 /* SingleCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ABD7B1E845BC000A66D54 /* SingleCocktailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		F87ABD711E81B8D300A66D54 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellarTableViewController.swift; sourceTree = "<group>"; };
-		F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		F87ABD771E81C9DF00A66D54 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		F87ABD7B1E845BC000A66D54 /* SingleCocktailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCocktailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 				F87ABD711E81B8D300A66D54 /* HomeViewController.swift */,
 				F87ABD731E81BD2A00A66D54 /* SearchTableViewController.swift */,
 				F87ABD751E81BFC300A66D54 /* CellarTableViewController.swift */,
-				F87ABD771E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift */,
+				F87ABD771E81C9DF00A66D54 /* SearchTableViewCell.swift */,
+				F87ABD7B1E845BC000A66D54 /* SingleCocktailViewController.swift */,
 			);
 			path = "Wine Cellar";
 			sourceTree = "<group>";
@@ -230,9 +233,10 @@
 			files = (
 				F86FCF491E8153B500D99190 /* LoginViewController.swift in Sources */,
 				F86FCF341E814D9D00D99190 /* AppDelegate.swift in Sources */,
+				F87ABD7C1E845BC000A66D54 /* SingleCocktailViewController.swift in Sources */,
 				F87ABD761E81BFC300A66D54 /* CellarTableViewController.swift in Sources */,
 				F87ABD721E81B8D300A66D54 /* HomeViewController.swift in Sources */,
-				F87ABD781E81C9DF00A66D54 /* SearchViewCellTableViewCell.swift in Sources */,
+				F87ABD781E81C9DF00A66D54 /* SearchTableViewCell.swift in Sources */,
 				F87ABD741E81BD2A00A66D54 /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
