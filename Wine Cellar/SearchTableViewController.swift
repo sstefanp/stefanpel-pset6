@@ -10,10 +10,6 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
-    
-    
-    let apiKey = "64e1087235e8283f90266b21b6ac947d"
-    
     // Dictionary for searchResults
     var searchResults: [[String : Any]] = []
     
@@ -23,6 +19,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.enablesReturnKeyAutomatically = true
+        searchBar.returnKeyType = .search
         searchBar.searchBarStyle = .prominent
         searchBar.placeholder = "Search for cocktails"
         self.navigationItem.titleView = searchBar
@@ -37,23 +35,16 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         
     }
     
-    //func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-      //  let text = searchBar.text?.replacingOccurrences(of: " ", with: "+")
-       // wineSearch(text: text as String!)
-    //}
-    
-    
-    // Search started
+    // MARK: - Search started function
     func searchButtonItemPressed(_sender: UIBarButtonItem) {
         let text = searchBar.text?.replacingOccurrences(of: " ", with: "+")
-        wineSearch(text: text as String!)
+        cocktailSearch(text: text as String!)
         resignFirstResponder()
     }
     
-    // Cancel search
+    // MARK: - Cancel search function
     func cancelButtonItemPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
-        print ("clicked")
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,13 +52,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         // Dispose of any resources that can be recreated.
     }
     
-    func wineSearch(text: String) {
-        //let urlString = "https://services.wine.com/api/beta2/service.svc/JSON/catalog?search="+text+"&size=50&apikey=64e1087235e8283f90266b21b6ac947d"
-        
+    // MARK: - Cocktail search function
+    func cocktailSearch(text: String) {
+
         let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+text
-        
-        print (urlString)
-        
         let request = URLRequest(url: URL(string: urlString)!)
         
         URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
@@ -91,13 +79,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
                     }
                     else {
                         // Fill dictionary with results
-                        
-                        print (self.searchResults)
-                        //guard let products = info["Products"] as? [String : Any] else { return }
-                        //guard let list     = products["List"] as? [[String : Any]] else { return }
-                        
                         guard let list = info["drinks"] as? [[String : Any]] else { return }
-                        
                         self.searchResults = list
                     }
                 } catch {
@@ -106,11 +88,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
                 self.tableView.reloadData()
             }
         }).resume()
-        print (searchResults)
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -121,12 +101,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Search View Cell", for: indexPath)
-        
-        // Configure the cell...
-        //cell.textLabel?.text = self.searchResults[indexPath.row]["Name"] as? String
-        
         cell.textLabel?.text = self.searchResults[indexPath.row]["strDrink"] as? String
-        
         return cell
     }
     
@@ -137,55 +112,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         let viewController = storyboard.instantiateViewController(withIdentifier: "SCVC") as! SingleCocktailViewController
         
         viewController.currentCocktail = cocktailClicked
-        
-        // Present SingleCocktailViewController
         self.navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

@@ -11,36 +11,57 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
+    // Array for dictionary of current cocktail.
     var currentRandomCocktail: [String : Any]? = nil
     
     // MARK: - Outlets
     @IBOutlet weak var randomCocktailName: UILabel!
     @IBOutlet weak var randomCocktailImage: UIImageView!
+    @IBOutlet weak var randomCocktailType: UILabel!
+    
     
     override func viewDidLoad() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed(_:)))
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(logout))
-        
-        
-        randomCocktail()
-        
-        super.viewDidLoad()
-        
+        // If not logged in,
         if FIRAuth.auth()?.currentUser == nil
         {
             self.performSegue(withIdentifier: "login", sender: nil)
         }
         
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Initialize navigation bar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed(_:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(logout))
+        
+        // Get random cocktail.
+        randomCocktail()
+        
+        super.viewDidLoad()
+        
+        // Image tapgesture recognizer
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        randomCocktailImage.addGestureRecognizer(tapGestureRecognizer)
+        randomCocktailImage.isUserInteractionEnabled = true
     }
     
+    // If random cocktail is tapped, go to single view.
+    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let cocktailClicked = currentRandomCocktail
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SCVC") as! SingleCocktailViewController
+        
+        viewController.currentCocktail = cocktailClicked
+        
+        // Present SingleCocktailViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // Get image for random cocktail.
     func getCocktailImage() {
         guard let imageUrl = currentRandomCocktail?["strDrinkThumb"] as? String else { return }
         let url = NSURL(string: imageUrl.replacingOccurrences(of: "http:", with: "https:"))
@@ -50,11 +71,9 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // Logging user out.
     @objc func logout() {
-        
-        // LOG USER OUT
         try? FIRAuth.auth()?.signOut()
-        
         self.performSegue(withIdentifier: "login", sender: nil)
     }
     
@@ -64,6 +83,7 @@ class HomeViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
     }
     
+    // Get random cocktail.
     func randomCocktail() {
         
         let url = "https://www.thecocktaildb.com/api/json/v1/1/random.php?"
@@ -97,29 +117,12 @@ class HomeViewController: UIViewController {
                         
                         self.getCocktailImage()
                         self.randomCocktailName.text = self.currentRandomCocktail?["strDrink"] as? String
+                        self.randomCocktailType.text = self.currentRandomCocktail?["strCategory"] as? String
                     }
                 } catch {
-                    print("Boem")
-                    //self.searchResults = []
+                    print("Error")
                 }
-                //self.tableView.reloadData()
             }
         }).resume()
     }
-    
-    
-    
-    // Presenting SearchViewController
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

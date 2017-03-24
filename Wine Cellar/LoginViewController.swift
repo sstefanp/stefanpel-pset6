@@ -17,18 +17,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: nil, action: nil)
     }
     
     // MARK: Actions
     @IBAction func loginButtonTouched(_ sender: Any) {
         FIRAuth.auth()?.signIn(withEmail: textFieldLoginEmail.text!, password: textFieldLoginPassword.text!) { (user, error) in
+            // Go to next view.
             if error == nil {
-                // go to next view
                 self.dismiss(animated: true, completion: nil)
                 
             }
@@ -39,6 +36,7 @@ class LoginViewController: UIViewController {
         return false
     }
     
+    // MARK: - Registering
     @IBAction func registerButtonTouched(_ sender: Any) {
         let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
         
@@ -56,7 +54,7 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
+        // Cancel register
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         
         alert.addTextField { textEmail in
@@ -65,7 +63,7 @@ class LoginViewController: UIViewController {
         
         alert.addTextField { textPassword in
             textPassword.isSecureTextEntry = true
-            textPassword.placeholder = "Enter your password"
+            textPassword.placeholder = "Enter a password"
         }
         
         alert.addAction(saveAction)

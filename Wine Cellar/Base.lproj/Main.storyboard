@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Shake me a Cocktail!-->
         <scene sceneID="gxx-hX-dSd">
             <objects>
-                <navigationController id="PVB-RP-UsK" sceneMemberID="viewController">
+                <navigationController title="Shake me a Cocktail!" id="PVB-RP-UsK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Scv-zp-WBw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ho-jk-7pO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -24,12 +24,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuo-27-Jz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276" y="-263"/>
+            <point key="canvasLocation" x="-986" y="179"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Log In-->
         <scene sceneID="0ST-5N-9Aw">
             <objects>
-                <viewController id="wc9-Tu-QVr" customClass="LoginViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log In" id="wc9-Tu-QVr" customClass="LoginViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cZQ-5o-2HC"/>
                         <viewControllerLayoutGuide type="bottom" id="0MA-WI-odi"/>
@@ -102,12 +102,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lec-Ri-cUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2359" y="-147"/>
+            <point key="canvasLocation" x="-2532" y="179"/>
         </scene>
-        <!--Item-->
+        <!--My Cocktail Bar-->
         <scene sceneID="YRD-gu-1ZP">
             <objects>
-                <navigationController id="HbQ-oA-8YW" sceneMemberID="viewController">
+                <navigationController title="My Cocktail Bar" id="HbQ-oA-8YW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vD2-r1-tNX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2g-9m-UX9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -119,22 +119,22 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQV-9v-moC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276" y="419"/>
+            <point key="canvasLocation" x="-986" y="896"/>
         </scene>
-        <!--Cellar Table View Controller-->
+        <!--My Cocktail Bar-->
         <scene sceneID="fap-jX-wOt">
             <objects>
-                <tableViewController id="9za-vv-h7c" customClass="CellarTableViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="My Cocktail Bar" id="9za-vv-h7c" customClass="CellarTableViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xh7-x2-s96">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="di8-Ao-oLT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="di8-Ao-oLT">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="di8-Ao-oLT" id="D5R-bi-cU4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -144,16 +144,17 @@
                             <outlet property="delegate" destination="9za-vv-h7c" id="l4E-7N-1YX"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="My Cocktail Bar" image="Mini Bar-25" id="T8I-Ja-Ry9"/>
                     <navigationItem key="navigationItem" id="6fr-kH-ZmS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOI-IR-Usd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="505"/>
+            <point key="canvasLocation" x="-162" y="896"/>
         </scene>
-        <!--Shaker-->
+        <!--Shake me a Cocktail-->
         <scene sceneID="TWJ-2A-mb9">
             <objects>
-                <viewController id="VkF-J9-VI7" customClass="HomeViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Shake me a Cocktail" id="VkF-J9-VI7" customClass="HomeViewController" customModule="Wine_Cellar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DFz-vH-eOf"/>
                         <viewControllerLayoutGuide type="bottom" id="mKm-dg-LTR"/>
@@ -165,6 +166,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-Ia-waQ">
                                 <rect key="frame" x="64" y="213" width="246" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uVv-HE-Agj" appends="YES" id="B8O-Rm-pLl"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlT-IL-786">
                                 <rect key="frame" x="166" y="154" width="0.0" height="0.0"/>
@@ -175,6 +180,13 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66b-I1-kWD">
                                 <rect key="frame" x="64" y="184" width="246" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-vU-25y">
+                                <rect key="frame" x="64" y="467" width="246" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -188,18 +200,24 @@
                     <connections>
                         <outlet property="randomCocktailImage" destination="OPv-Ia-waQ" id="5IW-UJ-Lhb"/>
                         <outlet property="randomCocktailName" destination="66b-I1-kWD" id="gJ0-mC-lrk"/>
+                        <outlet property="randomCocktailType" destination="Khv-vU-25y" id="9gf-9k-mJg"/>
                         <segue destination="ayj-HO-YYl" kind="presentation" identifier="login" id="QUi-wE-sQX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhP-Kz-s0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem title="Item" id="B0D-PR-tgY"/>
+                <tapGestureRecognizer id="uVv-HE-Agj">
+                    <connections>
+                        <action selector="imageClicked:" destination="VkF-J9-VI7" id="rh9-vh-BFd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="-265.81709145427288"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="-550.07496251874068"/>
         </scene>
-        <!--Item-->
+        <!--This Cocktail-->
         <scene sceneID="10K-Dr-Dk3">
             <objects>
-                <navigationController id="sp6-Qs-PWC" sceneMemberID="viewController">
+                <navigationController title="This Cocktail" id="sp6-Qs-PWC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3so-FS-I2m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1j-hj-lGD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -211,7 +229,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhT-ut-cdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="1331"/>
+            <point key="canvasLocation" x="-986" y="1666"/>
         </scene>
         <!--Cocktail-->
         <scene sceneID="xkO-VE-35n">
@@ -225,19 +243,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfE-zq-iYL">
-                                <rect key="frame" x="70" y="72" width="234" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aov-Vq-uX0">
-                                <rect key="frame" x="16" y="503" width="343" height="107"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aov-Vq-uX0">
+                                <rect key="frame" x="16" y="503" width="343" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dss-XY-sQR">
-                                <rect key="frame" x="16" y="300" width="343" height="21"/>
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -327,6 +341,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfE-zq-iYL">
+                                <rect key="frame" x="70" y="101" width="234" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -336,6 +354,7 @@
                     <navigationItem key="navigationItem" id="vf5-e9-jTI"/>
                     <connections>
                         <outlet property="cocktailName" destination="dss-XY-sQR" id="V1N-1k-fMH"/>
+                        <outlet property="image" destination="sfE-zq-iYL" id="fVh-9o-VgD"/>
                         <outlet property="ingredient1" destination="mZm-Ru-O1G" id="Lo5-JE-vfd"/>
                         <outlet property="ingredient2" destination="8B2-rS-0cE" id="x4C-le-JBx"/>
                         <outlet property="ingredient3" destination="vg2-xM-4hz" id="IgT-cn-cNN"/>
@@ -353,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6u-r6-GSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="1330.8845577211396"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="1665.5172413793105"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="B2K-NX-kGs">
@@ -367,16 +386,16 @@
                     <connections>
                         <segue destination="PVB-RP-UsK" kind="relationship" relationship="viewControllers" id="yKy-Mn-mw6"/>
                         <segue destination="HbQ-oA-8YW" kind="relationship" relationship="viewControllers" id="auM-2v-o58"/>
-                        <segue destination="sp6-Qs-PWC" kind="relationship" relationship="viewControllers" id="EJs-G4-B0h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6U-X1-JsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770" y="156"/>
+            <point key="canvasLocation" x="-1796" y="896"/>
         </scene>
     </scenes>
     <resources>
         <image name="Cocktail Shaker-25" width="25" height="25"/>
         <image name="Cocktail-25" width="25" height="25"/>
+        <image name="Mini Bar-25" width="25" height="25"/>
     </resources>
 </document>
